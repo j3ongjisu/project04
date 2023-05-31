@@ -13,7 +13,7 @@
 
 .header.on {
   /* background: #fff; */
-  
+
 }
 
 .header .inner {
@@ -185,6 +185,54 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
+/* 스크롤 아래 버튼 */
+.main_visual .scr {
+  position: absolute;
+  left: 15%;
+  bottom: 100px;
+
+  transform: translate(-100%, 0);
+  margin: 0 0 0 700px;
+  padding: 0 15px;
+
+  color: rgb(255, 255, 255);
+}
+
+
+.main_visual .scr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 24px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+.main_visual .scr::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 26px;
+  width: 3px;
+  height: 10px;
+  background: #0072bd;
+  border-radius: 1px;
+  animation: wheel 1s infinite;
+}
+
+@keyframes wheel {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+
 
 
 
@@ -194,73 +242,136 @@
 
 
 /*section 2*/
-.business{
+.business {
   padding: 100px 0;
 }
 
-.business .title{
+.business .title {
+  padding: 0 15px;
   text-align: center;
 }
 
-.business .title h2{
+.business .title h2 {
   margin: 0 0 25px 0;
   font-size: 40px;
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .business .title p {
   margin: 0 0 20px 0;
   color: #666;
   font-size: 17px;
-    font-weight: 400;
+  font-weight: 400;
 }
 
-.business .con{
+.business .con {
+  padding: 0 15px;
   display: flex;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.business .con figure{
+.business .con figure {
+  height: 500px;
   position: relative;
   flex: 1;
-  overflow: hidden;
 }
 
-.business .con figure img{
+.business .con figure .img_box {
+  position: relative;
+}
+
+/* 사진 1,2,3 가상 요소 선 */
+.business .con figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 0%;
+  border-top: 2px solid #0072bd;
+  border-left: 2px solid #00aeef;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.business .con figure:hover::before {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
+.business .con figure:hover::after {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
+.business .con figure::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0%;
+  border-bottom: 2px solid #00aeef;
+  border-right: 2px solid #0072bd;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+
+
+.business .con figure .img_box {
+  overflow: hidden;
+
+}
+
+.business .con figure img {
   transition: 0.6s;
 }
 
-.business .con figure:hover img{
+.business .con figure:hover img {
   transform: scale(1.1);
 }
 
-.business .con figure .img_tit{
-  text-align: center;
-position: relative;
-color: #fff;
-top: -400px;
+.business .con figure {
+  overflow: hidden;
+
 }
 
-.business .con figure .img_tit h3{
+.business .con figure .img_tit {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px gray;
+  top: -400px;
+  z-index: 999;
+}
+
+.business .con figure .img_tit h3 {
   margin: 0 0 10px;
   font-size: 30px;
   font-weight: 700;
 }
-.business .con figure .img_tit p{
+
+.business .con figure .img_tit p {
   font-size: 17px;
   font-weight: 400;
 }
 
 /* cover */
 
-.business .con figure .cover{
+.business .con figure .cover {
   position: absolute;
   inset: 0 auto auto 100%;
 
   width: 100%;
-  height: 95%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -270,8 +381,59 @@ top: -400px;
   padding: 50px 30px;
 }
 
-.business .con figure:hover .cover{
+.business .con figure:hover .cover {
   inset: 0 auto auto 0;
+}
+
+.business .con figure .cover a {
+  position: absolute;
+  display: block;
+  padding: 13px 20px 10px 20px;
+
+  width: 200px;
+  left: 23%;
+  bottom: 20%;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+
+  font-size: 16px;
+  flex-direction: column;
+
+  z-index: 999;
+}
+
+.business .con figure .cover a:hover {
+  background: #0072bd;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+
+
+
+/* section 2-1 background video */
+.bg_video {}
+
+.bg_video .bg_txt {}
+
+
+
+/*스크롤 위로*/
+.to_top {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 999;
+}
+
+.to_top i {
+  color: #fff;
+  background: #0072bd;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 
@@ -284,5 +446,24 @@ top: -400px;
 
 
 
+/*  section 3 -architecture 건축 사업 */
+.architecture {
+  padding: 100px 0;
+}
 
+.architecture .ar_tit {
+  text-align: center;
+}
 
+.architecture .ar_tit h2 {
+  margin: 0 0 25px 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.architecture .ar_tit p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 17px;
+  font-weight: 400;
+}
