@@ -130,7 +130,8 @@
 
 }
 
-.main_visual .main_slide {}
+.main_visual .main_slide {
+}
 
 .main_visual .main_slide figure {
   position: relative;
@@ -161,7 +162,7 @@
 
 .main_visual .main_slide .slogan {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1200px;
@@ -170,26 +171,78 @@
 
 .main_visual .main_slide .slogan strong {
   display: block;
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
   line-height: 60px;
   font-size: 55px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .main_visual .main_slide .slogan p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #fff;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 메인 슬라이드 숫자 버튼 */
+.main_visual .menu {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+
+  transform: translate(0, 0);
+  margin: 0 0 0 -280px;
+  padding: 0 15px;
+}
+
+.main_visual .menu li {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main_visual .menu li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.main_visual .menu li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: #0072bd;
+}
+
+.main_visual .menu li.on::after {
+  width: 100%;
+  transition: 4s;
+}
+
+.main_visual .menu li a {
+  display: block;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.main_visual .menu li.on a {
+  color: rgba(255, 255, 255, 1);
 }
 
 /* 스크롤 아래 버튼 */
 .main_visual .scr {
   position: absolute;
   left: 15%;
-  bottom: 100px;
+  bottom: 140px;
 
   transform: translate(-100%, 0);
   margin: 0 0 0 700px;
@@ -410,12 +463,202 @@
 }
 
 
-
-
 /* section 2-1 background video */
-.bg_video {}
+.bg_video {
+  position: relative;
+  height: 400px;
+}
 
-.bg_video .bg_txt {}
+.bg_video .bg_cover{
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.bg_video .bg_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 999;
+}
+
+.bg_video .bg_txt h2{
+  margin: 0 0 25px 0;
+  color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
+.bg_video .bg_txt p{
+margin: 0 0 20px 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/*section 3*/
+.bg{
+  position: relative;
+  height: 400px;
+    background: url(../images/bg02.jpg)
+}
+
+.bg .background_cover{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+height: 400px;
+width: 100%;
+background: rgba(0,0,0,0.6);
+text-align: center;
+}
+
+.bg .background_cover .background_txt{
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.bg .background_cover h2{
+  margin: 0 0 70px 0;
+font-size: 50px;
+font-weight: 500;
+color: #fff;
+}
+
+.bg .background_cover p::before{
+  content: "";
+  position: absolute;
+  top: 62px;
+  left: 312px;
+  width: 1px;
+  height: 40px;
+  background: #fff;
+}
+
+.bg .background_cover p{
+  margin: 0 0 70px 0;
+font-size: 18px;
+font-weight: 300;
+color: #fff;
+}
+
+.bg .background_cover a{
+padding: 10px 25px 8px 25px ;
+
+font-size: 16px;
+font-weight: 200;
+
+border: 1px solid #fff;
+color: #fff;
+}
+
+.bg .background_cover a:hover{
+  background: #0072bd;
+  
+  font-weight: 300;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*section 4 - NEWS*/
+.inner,
+.tit {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+p {
+    word-break: keep-all;
+
+}
+
+#main_content {
+    padding: 100px 0;
+}
+
+#main_content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+}
+
+#main_content p {
+    line-height: 20px;
+}
+
+#main_content .tit {
+    margin: 0 auto 40px auto;
+}
+
+#main_content .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#main_content .content>* {
+    flex: 1 0 350px;
+}
+
+.responsive_box {
+    position: relative;
+    background: tomato;
+    padding-bottom: 56.25%;
+}
+
+.responsive_box>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive_map_box {
+    position: relative;
+    background: tomato;
+    padding-bottom: 56.25%;
+}
+
+.responsive_map_box .root_daum_roughmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive_map_box .root_daum_roughmap .wrap_map {
+    height: calc(100% - 1px);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -446,24 +689,5 @@
 
 
 
-/*  section 3 -architecture 건축 사업 */
-.architecture {
-  padding: 100px 0;
-}
 
-.architecture .ar_tit {
-  text-align: center;
-}
 
-.architecture .ar_tit h2 {
-  margin: 0 0 25px 0;
-  font-size: 40px;
-  font-weight: 600;
-}
-
-.architecture .ar_tit p {
-  margin: 0 0 20px 0;
-  color: #666;
-  font-size: 17px;
-  font-weight: 400;
-}

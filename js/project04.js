@@ -4,10 +4,26 @@ $(function () {
         fade: true,
         // vertical:true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         pauseOnHover: false,
         pauseOnFocus: false,
     });
+
+// 슬라이드 도트
+
+$('.main_slide').on('init afterChange', function (e, s, c) {
+    const current = $('.main_slide .slick-current');
+    current.addClass('on').siblings().removeClass('on');
+
+    $('.main_visual .slide_num span').text(c ? (c + 1) : 1);
+    $('.main_visual .slide_num strong').text(s.slideCount);
+
+    console.log(s.slideCount);
+
+    $('.main_visual .menu li').eq(0).addClass('on');
+        $('.main_visual .menu li').eq(c).addClass('on')
+            .siblings().removeClass('on');
+});
 
     $(window).on('scroll', function () {
         // 변수에 스크롤한 양을 담는다.
@@ -35,14 +51,15 @@ $(function () {
     });
 
 
-    //$('.bgndVideo').YTPlayer({
-    //  videoURL: '',
-    //재생하고 싶은 곳
-    //  containment: '.bg_video',
-    //  autoPlay: true,
-    //  showControls: false,
-    //  playOnlyIfVisible: true,
-    // });
+    $('.bgndVideo').YTPlayer({
+    videoURL: 'https://youtu.be/VHwAKIRu_Ng',
+    // 재생하고 싶은 곳
+    containment: '.bg_video',
+    mute:true,
+    autoPlay: true,
+    showControls: false,
+    playOnlyIfVisible: true,
+    });
 
 
     // $(window).on('load scroll', function () {
