@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="./css/font.css">
   <link rel="stylesheet" href="./css/slick.css">
   <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
   <link rel="stylesheet" href="./css/project04.css">
 
   <script src="./js/jquery-1.12.4.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="./js/aos.js"></script>
   <script src="./js/project04.js"></script>
 </head>
 
@@ -130,25 +132,25 @@
             </div>
           </figure>
 
-        
-      </div>
+
+        </div>
         <ul class="menu">
           <li>
-              <a href="#slide1">01</a>
+            <a href="#slide1"></a>
           </li>
           <li>
-              <a href="#slide2">02</a>
+            <a href="#slide2"></a>
           </li>
           <li>
-              <a href="#slide3">03</a>
+            <a href="#slide3"></a>
           </li>
           <li>
-              <a href="#slide4">04</a>
+            <a href="#slide4"></a>
           </li>
           <li>
-              <a href="#slide4">05</a>
+            <a href="#slide4"></a>
           </li>
-      </ul>
+        </ul>
 
         <!--스크롤 아래 버튼-->
         <a href="#down" class="scr">
@@ -169,7 +171,7 @@
         <!-- 사진 3개 -->
         <div class="inner con">
           <!-- 사진 1 건축 -->
-          <figure>
+          <figure data-aos="fade-up" data-aos-delay="200">
             <div class="img_box">
               <img src="./images/sec2_bg01.jpg" alt="">
             </div>
@@ -182,7 +184,7 @@
             </div>
           </figure>
           <!-- 사진 2 인프라 -->
-          <figure>
+          <figure data-aos="fade-up" data-aos-delay="300">
             <div class="img_box">
               <img src="./images/sec2_bg02.jpg" alt="">
             </div>
@@ -195,12 +197,12 @@
             </div>
           </figure>
           <!-- 사진 3 부동산 자산관리 -->
-          <figure>
+          <figure data-aos="fade-up" data-aos-delay="400">
             <div class="img_box">
               <img src="./images/sec2_bg03.jpg" alt="">
             </div>
             <div class="img_tit">
-              <h3>부동산 자산관리</h3>
+              <h3>부동산자산관리</h3>
               <p>부동산의 자산가치 및 수익 극대화</p>
             </div>
             <div class="cover">
@@ -216,14 +218,14 @@
 
       <!-- section 2-1 background video -->
       <section class="bg_video">
-<div class="bg_cover"></div>
+        <div class="bg_cover"></div>
         <div class="bg_txt inner">
-          <h2>사람을 존중하는 기술로 풍요로운 내일을 건설합니다.</h2>
+          <h2>사람을 존중하는 기술로 <br> 풍요로운 내일을 건설합니다.</h2>
           <p>초우량 종합건설회사를 지향하는 동원건설산업은 고객을 위한 가치창조를 목표로 합니다.</p>
         </div>
 
         <!-- 백그라운드에 유튜브 비디오 재생 -->
-        <div class="bgndVideo player" ></div>
+        <div class="bgndVideo player"></div>
 
       </section>
 
@@ -235,7 +237,7 @@
 
 
       <!-- section 3 -->
-      <section class="architecture third">
+      <section class="architecture">
 
         <div class="ar_tit">
           <h2>건축사업</h2>
@@ -245,147 +247,163 @@
         <div class="ar_con inner">
           <!--sec3 주거시설-->
           <ul class="ar_list">
-            
+
             <li>
-              <div class="ar_img_box">
+              <div class="ar_img_box" data-aos="fade-right">
                 <img src="./images/architecture_01.jpg" alt="">
               </div>
 
-              <div class="ar_txt">
+              <div class="ar_txt" data-aos="fade-up">
                 <h3>주거시설</h3>
                 <p>고객의 개성과 생활을 닮은 주거공간을 만들기 위해 노력합니다.<br>
                   풍요로운 생활을 위한 공간과 미래를 내다보는 첨단기술력을 바탕으로<br> 보다 편리하고 안락한 생활을 약속합니다.</p>
+                <div class="ar_btn"><a>실적보기</a></div>
               </div>
             </li>
 
 
             <!--sec3 물류시설-->
             <li>
-              <div class="ar_img_box">
+              <div class="ar_txt" data-aos="fade-up">
+                <h3>물류시설</h3>
+                <p>세계 최대의 어업회사인 동시에 국내 최고의 식품사업 그룹인 동원그룹과 <br> 동반 성장한 동원건설산업은 동양 최대의 냉동창고와 <br>전국적으로 연결된 물류센터 건립
+                  Know-how를
+                  기반으로<br>
+                  물류시설분야의 선구자적 역할을 다하고 있습니다.</p>
+                <div class="ar_btn"><a>실적보기</a></div>
+              </div>
+
+              <div class="ar_img_box" data-aos="fade-left">
                 <img src="./images/architecture_02.jpg" alt="">
               </div>
 
-              <div class="ar_txt">
-                <h3>물류시설</h3>
-                <p>세계 최대의 어업회사인 동시에 국내 최고의 식품사업 그룹인 동원그룹과 동반 성장한 동원건설산업은 동양 최대의 냉동창고와 전국적으로 연결된 물류센터 건립 Know-how를 기반으로
-                  물류시설분야의 선구자적 역할을 다하고 있습니다.</p>
-              </div>
             </li>
 
 
             <!--sec3 사무, 상업용 빌딩-->
             <li>
-              <div class="ar_img_box">
+              <div class="ar_img_box" data-aos="fade-right">
                 <img src="./images/architecture_03.jpg" alt="">
               </div>
 
-              <div class="ar_txt">
+              <div class="ar_txt" data-aos="fade-up">
                 <h3>사무용·상업용 빌딩</h3>
-                <p>정보화 시대를 이끌어 가는 살아 숨 쉬는 빌딩을 만들기 위해 정보시스템 자동화 시스템 및 건물관리 시스템으로 구성된 사무환경과 첨단 기술이 조화된 미래형 업무공간을 창조합니다.
+                <p>정보화 시대를 이끌어 가는 살아 숨 쉬는 빌딩을 만들기 위해 <br>정보시스템 자동화 시스템 및 건물관리 시스템으로 구성된 사무환경과 <br>첨단 기술이 조화된 미래형 업무공간을
+                  창조합니다.
                 </p>
+                <div class="ar_btn"><a>실적보기</a></div>
               </div>
             </li>
 
 
             <!--리모델링-->
             <li>
-              <div class="ar_img_box">
+              <div class="ar_txt" data-aos="fade-up">
+                <h3>리모델링</h3>
+                <p>건축, 기계, 전기설비, 환경, 승강기설비, 자동제어설비, 사무환경개선 등 <br>건축물의 기능과 공간 재구성을 통한 성능 최적화로 물리적·사회적 수명을 <br>연장 및 노후
+                  건축물의
+                  가치를
+                  향상시킵니다.</p>
+                <div class="ar_btn"><a>실적보기</a></div>
+              </div>
+
+              <div class="ar_img_box" data-aos="fade-left">
                 <img src="./images/architecture_04.jpg" alt="">
               </div>
 
-              <div class="ar_txt">
-                <h3>리모델링</h3>
-                <p>건축, 기계, 전기설비, 환경, 승강기설비, 자동제어설비, 사무환경개선 등 건축물의 기능과 공간 재구성을 통한 성능 최적화로 물리적·사회적 수명을 연장 및 노후 건축물의 가치를
-                  향상시킵니다.</p>
-              </div>
             </li>
           </ul>
 
 
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </section>
 
 
 
 
-      <!-- section 3-1 background 2 -->
+
+
+
+
+
+
+
+      <!-- section4 - NOTICE -->
+
+
+      <section id="main_content">
+
+        <div class="tit">
+          <h2>NOTICE</h2>
+        </div>
+
+
+
+        <div class="inner content">
+          <div class="left">
+            <div class="responsive_map_box">
+              <!-- * 카카오맵 - 지도퍼가기 -->
+              <!-- 1. 지도 노드 -->
+              <div id="daumRoughmapContainer1685603851608" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+              <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+              <script charset="UTF-8" class="daum_roughmap_loader_script"
+                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+              <!-- 3. 실행 스크립트 -->
+              <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                  "timestamp": "1685603851608",
+                  "key": "2fzzj",
+                  "mapWidth": "570",
+                  "mapHeight": "320"
+                }).render();
+              </script>
+
+
+
+              <!-- 3. 실행 스크립트 -->
+              <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                  "timestamp": "1684908914984",
+                  "key": "2ewbf",
+
+                }).render();
+              </script>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="responsive_box">
+              <iframe src="https://www.youtube.com/embed/F9uvsVrb_Ec" title="동원건설산업 양주회천 A21-BL 4공구 현장" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+
+      <!-- background 2 -->
       <section class="bg">
         <div class="background_cover">
           <div class="background_txt">
-          <h2>Sales
-            Information</h2>
+            <h2>Sales
+              Information</h2>
             <p>
               미래를 내다보는 동원의 건설 과학으로
               21세기 첨단 건축 문화가 한걸음 가까워집니다.
-              </p>
-              <a href="">바로가기</a>
-            </div>
+            </p>
+            <a href="">바로가기</a>
+          </div>
         </div>
       </section>
-
-
-
-
-
-
-<!-- section4 - NOTICE -->
-
-
-<section id="main_content">
-
-    <div class="tit">
-        <h2>NOTICE</h2>
-    </div>
-
-    <div class="inner content">
-        <div class="left">
-            <div class="responsive_map_box">
-                <!-- * 카카오맵 - 지도퍼가기 -->
-                <!-- 1. 지도 노드 -->
-                <div id="daumRoughmapContainer1684908914984"
-                    class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                <!--
-2. 설치 스크립트
-* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
-                <script charset="UTF-8" class="daum_roughmap_loader_script"
-                    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                <!-- 3. 실행 스크립트 -->
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp": "1684908914984",
-                        "key": "2ewbf",
-                        
-                    }).render();
-                </script>
-            </div>
-        </div>
-        <div class="right">
-            <div class="responsive_box">
-                <iframe src="https://www.youtube.com/embed/F9uvsVrb_Ec"
-                    title="동원건설산업 양주회천 A21-BL 4공구 현장" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-</section>
-</section>
-
 
 
 
@@ -393,8 +411,27 @@
     </main>
 
 
+    <!-- footer -->
+    <footer class="footer">
 
-    <footer class="footer"></footer>
+      <div class="ft_top">
+        <div class="ft_wrap">
+          <ul>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">찾아오시는 길</a></li>
+            <li><a href="">신용평가 등급</a></li>
+            <li><a href="">결산 공고</a></li>
+            <li><a href="">정도경영신고센터</a></li>
+            <li><a href="">이메일무단수집거부</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ft_bottom">
+
+      </div>
+
+    </footer>
 
     <div class="to_top">
       <i class="xi-arrow-top"></i>
@@ -410,7 +447,7 @@
 
   <script>
     AOS.init();
-</script>
+  </script>
 
 
 </body>
