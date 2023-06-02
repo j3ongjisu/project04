@@ -4,71 +4,55 @@
 
 /* header */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  background: #fff;
+  border-bottom: 1px solid transparent;
   z-index: 999;
 }
 
 .header.on {
-  /* background: #fff; */
-
+  border-bottom: 1px solid #ddd;
 }
 
-.header .inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  /* align-items: center; */
-  height: 100px;
-  line-height: 100px;
-
+/* js 메뉴 고정 */
+.header.on .header_wrap {
+  height: 70px;
   transition: 0.5s;
 }
 
-.header.on .inner {
-  height: 100px;
+.header .header_wrap {
+  display: flex;
+  align-items: center;
+  height: 80px;
 }
 
-.header a {
-  display: block;
-}
-
-/* 메뉴 */
 .header .gnb {
   margin: 0 0 0 auto;
-}
-
-.header .gnb {
-  color: #fff
 }
 
 .header .gnb>ul {
   display: flex;
   gap: 40px;
-
 }
 
 .header .gnb>ul>li {
   position: relative;
-}
-
-.header .gnb>ul>li>a {
-  position: relative;
-  font-size: 16px;
+  color: #555;
   font-weight: 500;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
-.header .gnb>ul>li~li>a::before {
+.header .gnb>ul>li~li::before {
   content: "";
   position: absolute;
-  top: 43px;
+  top: 50%;
   left: -20px;
-  width: 2px;
+  width: 1px;
   height: 12px;
-  background: #fff;
+  background: #ddd;
+  transform: translate(0, -50%);
 }
 
 .header .gnb>ul>li .sub {
@@ -97,29 +81,35 @@
   height: 200px;
 }
 
-.header .gnb::before {
+
+/* ----- 다단 메뉴 배경 창 만들기 ----- */
+/* .header .gnb::before {
   content: "";
   position: absolute;
   top: 100px;
   left: 0;
   width: 100%;
   height: 0px;
-  border-top: 1px solid #ddd;
-  background: #fff;
+  background: #555;
   z-index: 999;
 
   transition: 0.5s;
 }
 
 .header .gnb:hover::before {
+  top: 70px;
   height: 200px;
-}
+} */
 
 /* 메뉴 아이콘 */
 .header .service {
   margin: 0 0 0 50px;
   font-size: 20px;
-  color: #fff;
+  color: #666;
+}
+
+.header .service .xi-bars {
+  margin: 0 0 0 12px;
 }
 
 /* section 1 
@@ -134,7 +124,7 @@
 
 .main_visual .main_slide figure {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 80px);
 }
 
 .main_visual .main_slide .itm01 {
@@ -166,6 +156,7 @@
   transform: translate(-50%, -50%);
   width: 1200px;
   padding: 0 15px;
+  text-shadow: 1px 1px #666;
 }
 
 .main_visual .main_slide .slogan strong {
@@ -179,7 +170,7 @@
 }
 
 .main_visual .main_slide .slogan p {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   color: #fff;
 }
@@ -501,7 +492,7 @@
   margin: 0 0 20px 0;
   color: #fff;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
@@ -704,7 +695,7 @@ p {
 
 .bg .background_cover h2 {
   margin: 0 0 70px 0;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   color: #fff;
 }
@@ -712,16 +703,16 @@ p {
 .bg .background_cover p::before {
   content: "";
   position: absolute;
-  top: 63px;
-  left: 315px;
+  top: 53px;
+  left: 295px;
   width: 1px;
   height: 40px;
   background: #fff;
 }
 
 .bg .background_cover p {
-  margin: 0 0 70px 0;
-  font-size: 18px;
+  margin: 0 0 60px 0;
+  font-size: 17px;
   font-weight: 300;
   color: #fff;
 }
@@ -749,40 +740,40 @@ p {
 
 
 /* ------ footer ----- */
-.footer{
+.footer {
   padding: 50px 0;
 }
 
-.footer .ft_top{
+.footer .ft_top {
   height: 30px;
 }
 
-.footer .ft_top .ft_wrap{
+.footer .ft_top .ft_wrap {
   width: 1200px;
   margin: 0 auto;
 }
 
-.footer .ft_top .ft_wrap ul{
+.footer .ft_top .ft_wrap ul {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.footer .ft_top .ft_wrap ul>li{
+.footer .ft_top .ft_wrap ul>li {
   font-weight: 300;
 }
 
 
 
-.footer .ft_top .ft_wrap ul .priv{
+.footer .ft_top .ft_wrap ul .priv {
   font-weight: 600;
 }
 
-.footer .ft_bottom{
+.footer .ft_bottom {
   height: 100px;
 }
 
-.footer .ft_bottom .ft_wrap{
+.footer .ft_bottom .ft_wrap {
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -791,6 +782,16 @@ p {
 
 
 
+
+#main_content .notice_txt {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  justify-content: space-around;
+}
 
 
 
